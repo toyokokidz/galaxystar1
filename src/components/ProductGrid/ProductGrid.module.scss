@@ -1,0 +1,165 @@
+.productGrid {
+  padding: 40px 0;
+  background: #000;
+}
+
+.container {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: flex;
+  gap: 24px;
+}
+
+.leftColumn, .rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.smallItems {
+  display: flex;
+  gap: 24px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 1px #ffffff;
+    z-index: 1;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+
+  .name {
+    position: absolute;
+    bottom: 24px;
+    left: 12px;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 2;
+  }
+}
+
+.large {
+  width: 680px;
+  aspect-ratio: 680/604;
+}
+
+.medium {
+  width: 680px;
+  &[href*="mouse"] {
+    aspect-ratio: 680/290;
+  }
+  &[href*="mousepad"] {
+    aspect-ratio: 680/604;
+  }
+}
+
+.small {
+  width: 328px;
+  aspect-ratio: 328/290;
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+  }
+  
+  .large {
+    width: 816px;
+    aspect-ratio: 816/725;
+  }
+  
+  .medium {
+    width: 816px;
+    &[href*="mouse"] {
+      aspect-ratio: 816/348;
+    }
+    &[href*="mousepad"] {
+      aspect-ratio: 816/725;
+    }
+  }
+  
+  .small {
+    width: 394px;
+    aspect-ratio: 394/348;
+  }
+}
+
+@media (max-width: 1366px) {
+  .container {
+    max-width: 1280px;
+  }
+  
+  .large {
+    width: 590px;
+    aspect-ratio: 590/525;
+  }
+  
+  .medium {
+    width: 590px;
+    &[href*="mouse"] {
+      aspect-ratio: 590/252;
+    }
+    &[href*="mousepad"] {
+      aspect-ratio: 590/525;
+    }
+  }
+  
+  .small {
+    width: 285px;
+    aspect-ratio: 285/252;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+  }
+  
+  .rightColumn {
+    width: 100%;
+  }
+  
+  .smallItems {
+    flex-direction: column;
+  }
+  
+  .large, .medium, .small {
+    width: 100%;
+    aspect-ratio: 328/290;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    gap: 12px;
+  }
+} 

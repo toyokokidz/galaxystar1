@@ -1,0 +1,151 @@
+.footer {
+  background: #000;
+  padding: 66px 24px 40px;
+  color: white;
+}
+
+.container {
+  max-width: 1384px;
+  margin: 0 auto;
+  border-top: 1px solid white;
+  padding-top: 66px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-bottom: 66px;
+}
+
+.column {
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+}
+
+.link {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    color: white;
+    
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.socialLink {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    color: white;
+    
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.subscribe {
+  position: relative;
+  
+  input {
+    width: 100%;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 0 48px 0 16px;
+    color: white;
+    font-size: 14px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    svg {
+      fill: white;
+    }
+  }
+}
+
+.bottom {
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+@media (max-width: 1366px) {
+  .container {
+    max-width: 1270px;
+  }
+}
+
+@media (min-width: 1481px) {
+  .container {
+    max-width: 1824px;
+  }
+} 
