@@ -64,7 +64,7 @@ const Footer = () => {
           <div className={styles.copyright}>
             <span>© 2025, GalaxyStar</span>
             <div className={styles.payments}>
-              <img src="/images/payments.png" alt="Payment methods" />
+              <a href="https://www.paypal.com/paypalme/GalaxyStar" alt="Payment methods" />
             </div>
           </div>
         </div>

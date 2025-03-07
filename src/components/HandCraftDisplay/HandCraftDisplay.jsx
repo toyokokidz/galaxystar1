@@ -1,14 +1,14 @@
-import styles from './HandCraftBanner.module.scss'
+import styles from './HandCraftDisplay.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const HandCraftBanner = () => {
+const HandCraftDisplay = () => {
   return (
-    <section className={styles.banner}>
+    <section className={styles.displaySection}>
       <div className={styles.wrapper}>
         <Image 
-          src="/images/handcraft-banner.jpg"
-          alt="HandCraft Banner"
+          src="/images/handcraft-block.jpg"
+          alt="HandCraft Display"
           fill
           style={{ objectFit: 'cover' }}
           priority
@@ -25,4 +25,4 @@ const HandCraftBanner = () => {
   )
 }
 
-export default HandCraftBanner
+export default HandCraftDisplay

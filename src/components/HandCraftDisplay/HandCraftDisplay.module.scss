@@ -1,4 +1,4 @@
-.banner {
+.displaySection {
   margin-top: 30px;
   margin-bottom: 40px;
   padding: 0 24px;
@@ -53,7 +53,7 @@
 
 // 1366px
 @media (max-width: 1366px) {
-  .banner {
+  .displaySection {
     max-width: 1270px;
     margin-left: auto;
     margin-right: auto;
@@ -65,7 +65,7 @@
 
 // 1480px (базовый)
 @media (min-width: 1367px) and (max-width: 1480px) {
-  .banner {
+  .displaySection {
     max-width: 1384px;
     margin-left: auto;
     margin-right: auto;
@@ -74,7 +74,7 @@
 
 // 1920px
 @media (min-width: 1481px) {
-  .banner {
+  .displaySection {
     max-width: 1824px;
     margin-left: auto;
     margin-right: auto;
