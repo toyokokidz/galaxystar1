@@ -1,15 +1,29 @@
 .aboutSection {
   padding: 0 24px;
   margin-bottom: 66px;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+    margin-bottom: 40px;
+  }
 }
 
 .container {
   max-width: 1384px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 680px 680px;
+  grid-template-columns: repeat(2, 1fr); // Две колонки с равной шириной
   gap: 24px;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr; // Одна колонка на планшетах
+    gap: 16px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
 }
 
 .videoBlock {
@@ -20,6 +34,19 @@
   background: #000;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 1);
+
+  @media (max-width: 1366px) {
+    height: 550px;
+  }
+
+  @media (max-width: 1024px) {
+    height: 400px; // Уменьшаем высоту для планшетов
+  }
+
+  @media (max-width: 768px) {
+    height: 300px; // Уменьшаем высоту для мобильных устройств
+    border-radius: 16px;
+  }
 }
 
 .video {
@@ -44,6 +71,20 @@
   color: white;
   border: 1px solid rgba(255, 255, 255, 1);
   text-align: center;
+
+  @media (max-width: 1366px) {
+    height: 550px;
+  }
+
+  @media (max-width: 1024px) {
+    height: auto; // Высота адаптируется под контент
+    padding: 32px 48px; // Уменьшаем отступы для планшетов
+  }
+
+  @media (max-width: 768px) {
+    padding: 24px 16px; // Уменьшаем отступы для мобильных устройств
+    border-radius: 16px;
+  }
 }
 
 .title {
@@ -51,6 +92,16 @@
   font-weight: bold;
   margin-bottom: 24px;
   width: 100%;
+
+  @media (max-width: 1024px) {
+    font-size: 36px; // Уменьшаем размер шрифта для планшетов
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px; // Уменьшаем размер шрифта для мобильных устройств
+    margin-bottom: 12px;
+  }
 }
 
 .description {
@@ -59,6 +110,16 @@
   margin-bottom: 32px;
   opacity: 0.9;
   width: 100%;
+
+  @media (max-width: 1024px) {
+    font-size: 16px; // Уменьшаем размер шрифта для планшетов
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px; // Уменьшаем размер шрифта для мобильных устройств
+    margin-bottom: 16px;
+  }
 }
 
 .button {
@@ -77,14 +138,24 @@
   &:hover {
     background-color: rgba(255, 255, 255, 0.9);
   }
+
+  @media (max-width: 1024px) {
+    font-size: 16px; // Уменьшаем размер шрифта для планшетов
+    padding: 12px 24px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px; // Уменьшаем размер шрифта для мобильных устройств
+    padding: 10px 20px;
+  }
 }
 
 @media (max-width: 1366px) {
   .container {
     max-width: 1270px;
-    grid-template-columns: 623px 623px;
+    grid-template-columns: repeat(2, 1fr); // Две колонки с равной шириной
   }
-  
+
   .videoBlock, .contentBlock {
     height: 550px;
   }
@@ -93,9 +164,9 @@
 @media (min-width: 1481px) {
   .container {
     max-width: 1824px;
-    grid-template-columns: 900px 900px;
+    grid-template-columns: repeat(2, 1fr); // Две колонки с равной шириной
   }
-  
+
   .videoBlock, .contentBlock {
     height: 800px;
   }
